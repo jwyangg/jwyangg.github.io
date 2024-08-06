@@ -65,7 +65,11 @@ p {
   font-size: 1.4rem;
   background-image: linear-gradient(
     to right top,
-    #ffffff #8f97d8 #646fbc #454f99
+    #ffffff,
+    #e1eafa,
+    #b3d9f2,
+    #79cbdf,
+    #3cbcbb
   );
   /* background-color: rgb(141, 202, 202, 0.466); */
   /* width: 200px; */
