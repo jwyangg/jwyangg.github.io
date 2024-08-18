@@ -2,6 +2,7 @@ body {
   background: linear-gradient(
     180deg,
     rgba(223, 14, 128, 1) 0%,
+    rgb(223, 48, 145) 7%,
     rgba(228, 90, 165, 1) 35%,
     rgba(103, 189, 255, 1) 100%
   );
@@ -22,10 +23,11 @@ span {
 p {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  max-width: 50rem;
   height: auto;
   padding: 2px;
 }
