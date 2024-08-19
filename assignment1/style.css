@@ -32,12 +32,56 @@ p {
   padding: 2px;
 } */
 
+h1 {
+  font-weight: bold;
+  font-size: 5rem;
+  color: white;
+  padding: 80px;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+}
+
+.image {
+  position: relative;
+}
+
+/* I wanted to try my hardest to mimic the "resizing browser" 
+so I did a lot of research on how I could make that possible, 
+all the while having my text on top of my image */
+
+.image figcaption {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  right: 30%;
+  bottom: 40%;
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* .centered {
+  position: absolute;
+  top: 50%;
+  font-weight: bold;
+  font-size: 5rem;
+  color: white;
+} */
+
 body {
-  background: linear-gradient(135deg, #ff0078, #ff8c00);
+  background: linear-gradient(
+    180deg,
+    rgba(249, 229, 202, 1) 20%,
+    rgba(228, 38, 155, 1) 58%,
+    rgba(11, 168, 252, 1) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 span {
@@ -48,4 +92,11 @@ p {
   border: 1px groove white;
   padding: 20px;
   background-color: white;
+  position: relative;
+}
+
+.rajdhani-regular {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
