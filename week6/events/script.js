@@ -67,3 +67,14 @@ function removeMe() {
   }
   count--;
 }
+
+// can also use mouseover and mouseout (do the same things)
+boxContainer.addEventListener("mouseenter", dropMe);
+boxContainer.addEventListener("mouseleave", pickMe);
+function dropMe() {
+  boxContainer.classList.add("drop");
+}
+
+function pickMe() {
+  boxContainer.classList.remove("drop");
+}
