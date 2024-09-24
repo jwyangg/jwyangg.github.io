@@ -46,11 +46,11 @@ const videoTime = document.querySelector("#video-time");
 function showProgress() {
   const currentTime = myVideo.currentTime;
 
-  console.log("currentTime", currentTime.toFixed(2));
-  videoTime.textContent = currentTime.toFixed(2);
-  //   const progress = (currentTime / myVideo.duration) * 100;
-  //   console.log("progress", progress.toFixed(2));
-  //   progressBar.style.width = progress + "%";
+  // console.log("current time ", currentTime.toFixed(2));
+  videoTime.textContent = currentTime.toFixed(1);
+  const progress = (currentTime / myVideo.duration) * 100;
+  // console.log("progress", progress.toFixed(2));
+  progressBar.style.width = progress + "%";
 }
 
 const step1Btn = document.querySelector("#step-1-btn");
@@ -58,7 +58,7 @@ console.log(step1Btn);
 step1Btn.addEventListener("click", gotoStep1);
 
 function gotoStep1() {
-  myVideo.currentTime = 19.32;
+  myVideo.currentTime = 7.32;
 }
 
 const step2Btn = document.querySelector("#step-2-btn");
@@ -76,7 +76,6 @@ let likeCount = 0;
 
 const likesBtn = document.querySelector("#like-btn");
 likesBtn.addEventListener("click", addLikes);
-// likesBtn.addEventListener("click", toggleFullScreen);
 
 function addLikes() {
   likeCount++;
