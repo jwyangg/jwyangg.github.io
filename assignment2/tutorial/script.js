@@ -162,21 +162,16 @@ function gotoStep12() {
   craftVideo.currentTime = 206;
 }
 
-// Get the button element
+// Making the "Done!" button shuffle through a random order of colours
 const doneButton = document.querySelector("#done-btn");
 console.log(doneButton);
 
 // Array of colors to cycle through
-const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FFFF33"];
+const colors = ["#EF3E36", "#FFA400", "#009FFD", "#5DFDCB", "#DABFFF"];
 
-// Function to change the background color
 function changeColor() {
-  // Generate a random index for the colors array
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-  // Change the body's background color
   document.body.style.backgroundColor = randomColor;
 }
 
-// Add an event listener to the button
 doneButton.addEventListener("click", changeColor);

@@ -1,21 +1,20 @@
+.bungee-shade-regular {
+  font-family: "Bungee Shade", sans-serif;
+  /* font-weight: 400; */
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
 :root {
-  --primary-bg-color: #f4f4f4;
+  --primary-bg-color: #f4ef59;
   --text-color: #333;
-  --main-bg-color: #333;
-  --main-text-color: #fff;
+  --main-bg-color: #673782;
+  --main-text-color: #fffdfd;
   --main-btn-bg-color: #938989;
 }
 
-body,
-h1,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -24,9 +23,13 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  text-align: center;
 }
 
-/* Add additional styles as needed */
+h2,
+p {
+  margin: 7%;
+}
 
 /* Create a container for the main content */
 .container {
@@ -58,6 +61,9 @@ nav ul {
 
 nav ul li {
   margin-right: 20px;
+  border: 5px ridge rgb(188, 96, 188);
+  padding: 5px;
+  background-color: rgb(238, 199, 233);
 }
 
 nav a {
@@ -71,59 +77,12 @@ nav a {
   margin: 0 auto;
 }
 
-.media-player video {
+.media-player {
   max-width: 100%;
 }
 
-.custom-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 10px;
-  width: 100%;
-}
-
-.custom-controls button {
-  background-color: var(--main-btn-bg-color);
-  color: var(--main-text-color);
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-}
-
-/* .progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #ddd;
-  margin-top: 10px;
-  overflow: hidden;
-}
-
-.progress-bar span {
-  display: block;
-  height: 100%;
-  background-color: var(--main-bg-color);
-  width: 0;
-  transition: width 0.3s ease;
-} */
-.progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #e5e5cb68;
-  margin-top: 10px;
-  overflow: hidden;
-}
-
-.progress-bar span {
-  display: block;
-  height: 100%;
-  background-color: coral;
-  width: 0;
-  transition: width 0.3s ease;
+video {
+  width: 200%;
 }
 
 /* Footer styling */
