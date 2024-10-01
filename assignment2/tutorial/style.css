@@ -38,6 +38,10 @@ body {
   padding: 5%;
 }
 
+/* I didn't want square buttons so I changed it 
+to be rounded. I also changed the colour so that 
+it was more "fun". I made the font bold because
+it contrasted more, so it was easier to see */
 button {
   border-radius: 20px;
   padding: 1.5%;
@@ -46,6 +50,9 @@ button {
   font-weight: bold;
 }
 
+/* Making sure that there is a good enough gap between
+each line of text and centering the text so there is more
+ease of readability */
 .instructions {
   display: flex;
   flex-direction: column;
@@ -56,8 +63,6 @@ button {
   font-size: 1.2rem;
   line-height: 3;
 }
-
-/* Add additional styles as needed */
 
 /* Create a container for the main content */
 .container {
@@ -109,6 +114,8 @@ nav a {
   max-width: 100%;
 }
 
+/* Again, the original video size is very small
+so I needed to blow it up to fit the page */
 video {
   width: 200%;
 }
@@ -133,6 +140,7 @@ video {
   align-items: center;
 }
 
+/* Changed the colour so it fit the theme better */
 .progress-bar {
   width: 100%;
   height: 10px;

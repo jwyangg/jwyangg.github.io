@@ -1,3 +1,4 @@
+// This section shows the button change when clicking play and pause
 const craftVideo = document.querySelector("#craft-video");
 console.log(craftVideo);
 
@@ -18,6 +19,8 @@ function TogglePlay() {
   }
 }
 
+// This button is so that the user is able to click out of the
+// video upon double clicking
 const fullscreenBtn = document.querySelector("#fullscreen-btn");
 console.log(fullscreenBtn);
 
@@ -35,6 +38,8 @@ function toggleFullScreen() {
   }
 }
 
+// This is so that the user is able to see how far into the video they are
+// but I excluded any numbers because I don't really like the way it looks
 craftVideo.addEventListener("timeupdate", showProgress);
 
 const progressBar = document.querySelector("#progress-bar-fill");
@@ -47,6 +52,7 @@ function showProgress() {
   progressBar.style.width = progress + "%";
 }
 
+// This is the mute button to toggle the sound
 const muteBtn = document.querySelector("#mute-btn");
 console.log(muteBtn);
 
@@ -66,6 +72,7 @@ function toggleSound() {
   }
 }
 
+// The next long list is for each of the steps, and their respective times
 const step1Btn = document.querySelector("#step-1-btn");
 console.log(step1Btn);
 step1Btn.addEventListener("click", gotoStep1);
@@ -162,11 +169,15 @@ function gotoStep12() {
   craftVideo.currentTime = 206;
 }
 
+// This section is for the "Done!" button. I had to do a lot of experimenting
+// to work out how to get it to randomly shuffle
+
 // Making the "Done!" button shuffle through a random order of colours
 const doneButton = document.querySelector("#done-btn");
 console.log(doneButton);
 
-// Array of colors to cycle through
+// Array of colours I chose for the website to shift through
+// I chose all bright colours because it's a kids craft video
 const colors = ["#EF3E36", "#FFA400", "#009FFD", "#5DFDCB", "#DABFFF"];
 
 function changeColor() {
@@ -175,3 +186,7 @@ function changeColor() {
 }
 
 doneButton.addEventListener("click", changeColor);
+
+// On a side note, although I wanted to experiment doing more things
+// for the website I was very unwell, so this was the best I could come up
+// with for the time frame :(

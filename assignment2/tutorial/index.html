@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Berry Bunch</title>
-    <!-- add the font family of your choice -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
@@ -22,6 +21,8 @@
     </header>
 
     <!-- Navigation Section -->
+    <!-- Made sure that you can access each section no matter which 
+      section you are currently in -->
     <nav>
       <ul>
         <li><a href="../../assignment2/index.html">Home</a></li>
@@ -33,12 +34,17 @@
     <!-- Main Content Section -->
     <main class="container">
       <!-- Media Player Section -->
+      <!-- I wanted the video to be controlled with the buttons I 
+        provided so I removed the "controls" option -->
       <video id="craft-video">
         <source
           src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
           type="video/mp4"
         />
       </video>
+      <!-- I limited the amount of different controls because
+       of the audience target being kids so I didn't want it to 
+       overwhelm the user -->
       <div class="progress-bar">
         <span id="progress-bar-fill"></span>
       </div>
@@ -71,11 +77,15 @@
               height="30"
             />
           </button>
-          <!-- add the missing buttons or functionality here -->
         </div>
       </div>
 
-      <!-- Additional Content Section -->
+      <!-- Step buttons.
+       I chose to create the "DONE!" button for when the user is 
+       done, the page will change colours and it'll be like a reward
+       (like I've repeatedly mentioned because I want a child to be the
+       target audience, I felt like this was a good way to catch the users
+       attention) -->
       <section class="timeline">
         <button id="step-1-btn">Step 1</button>
         <button id="step-2-btn">Step 2</button>
@@ -92,6 +102,8 @@
         <button id="done-btn">DONE!</button>
       </section>
 
+      <!-- Chose an ordered list so that I didn't have to individually
+       type out the numbers, according to the step buttons -->
       <ol class="instructions">
         <li>Gather all materials</li>
         <li>Cut 12.5cm square of foam</li>
@@ -116,7 +128,9 @@
       </ol>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer Section 
+     Reintroduced the footer section because I utilised
+     an external sites icons-->
     <footer>
       <p>&copy; 2024 Berry Bunch Family Crafts. All rights reserved.</p>
       All icons by
