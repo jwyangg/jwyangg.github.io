@@ -1,9 +1,16 @@
+.bungee-shade-regular {
+  font-family: "Bungee Shade", sans-serif;
+  /* font-weight: 400; */
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
 :root {
-  --primary-bg-color: #f4f4f4;
+  --primary-bg-color: #f4ef59;
   --text-color: #333;
-  --main-bg-color: #333;
-  --main-text-color: #fff;
-  --main-btn-bg-color: #938989;
+  --main-bg-color: #673782;
+  --main-text-color: #fffdfd;
+  --main-btn-bg-color: #b3ade3;
 }
 
 body,
@@ -15,7 +22,7 @@ ul {
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -24,6 +31,32 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  text-align: center;
+}
+
+.timeline {
+  padding: 5%;
+}
+
+button {
+  border-radius: 20px;
+  padding: 1.5%;
+  margin: 5px;
+  background-color: rgb(170, 237, 173);
+  font-weight: bold;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 4%;
+}
+
+li {
+  margin: 10px;
 }
 
 /* Add additional styles as needed */
@@ -58,6 +91,9 @@ nav ul {
 
 nav ul li {
   margin-right: 20px;
+  border: 5px ridge rgb(188, 96, 188);
+  padding: 5px;
+  background-color: rgb(238, 199, 233);
 }
 
 nav a {
@@ -71,13 +107,17 @@ nav a {
   margin: 0 auto;
 }
 
-.media-player video {
+.media-player {
   max-width: 100%;
+}
+
+video {
+  width: 200%;
 }
 
 .custom-controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   margin-top: 10px;
@@ -98,7 +138,7 @@ nav a {
 .progress-bar {
   width: 100%;
   height: 10px;
-  background-color: #ddd;
+  background-color: #b3ade3;
   margin-top: 10px;
   overflow: hidden;
 }
