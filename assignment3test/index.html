@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag from Palette or Mixing Area</title>
+    <style>
+      /* Palette and swatch styling */
+      #palette {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .swatch {
+        width: 50px;
+        height: 50px;
+        cursor: grab;
+        border: 1px solid #000;
+        display: inline-block;
+      }
+
+      /* Mixing area */
+      #mixing-area {
+        width: 100px;
+        height: 100px;
+        border: 2px dashed #333;
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 18px;
+        background-color: #fff;
+        cursor: grab;
+      }
+
+      /* Canvas for applying colors */
+      #canvas {
+        display: flex;
+        gap: 10px;
+      }
+      .numbered-area {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 100px;
+        font-size: 24px;
+      }
+
+      /* Reset button */
+      #reset-button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Color palette with primary colors -->
+    <div id="palette">
+      <div
+        class="swatch"
+        style="background-color: #ff0000"
+        data-color="#ff0000"
+      ></div>
+      <div
+        class="swatch"
+        style="background-color: #00ff00"
+        data-color="#00ff00"
+      ></div>
+      <div
+        class="swatch"
+        style="background-color: #0000ff"
+        data-color="#0000ff"
+      ></div>
+    </div>
+
+    <!-- Mixing area where colors are mixed -->
+    <div id="mixing-area" draggable="true">Mix here</div>
+
+    <!-- Reset button to clear the mixing area -->
+    <button id="reset-button">Reset Mixing Area</button>
+
+    <!-- Canvas where mixed colors are applied -->
+    <div id="canvas">
+      <div class="numbered-area" data-number="1">1</div>
+      <div class="numbered-area" data-number="2">2</div>
+      <div class="numbered-area" data-number="3">3</div>
+    </div>
+
+    <script>
+      let mixedColor = ""; // To store the resulting mixed color
+
+      // Make the swatches draggable
+      const swatches = document.querySelectorAll(".swatch");
+      const mixingArea = document.getElementById("mixing-area");
+      const resetButton = document.getElementById("reset-button");
+
+      swatches.forEach((swatch) => {
+        swatch.setAttribute("draggable", true);
+        swatch.addEventListener("dragstart", (e) => {
+          e.dataTransfer.setData("color", e.target.dataset.color); // Store the swatch color
+        });
+      });
+
+      // Mixing area logic
+      mixingArea.addEventListener("dragover", (e) => {
+        e.preventDefault(); // Allow dropping
+      });
+
+      mixingArea.addEventListener("drop", (e) => {
+        const color = e.dataTransfer.getData("color"); // Get the dragged color
+
+        if (!mixedColor) {
+          mixedColor = color; // Set the first color
+        } else {
+          mixedColor = mixColors(mixedColor, color); // Mix if there's already a color
+        }
+
+        mixingArea.style.backgroundColor = mixedColor; // Show the mixed color
+        e.dataTransfer.setData("color", mixedColor); // Set the mixed color to be dragged
+      });
+
+      mixingArea.addEventListener("dragstart", (e) => {
+        e.dataTransfer.setData("color", mixedColor); // Allow dragging the mixed color
+      });
+
+      // Simple color mixing logic (blends two colors)
+      function mixColors(color1, color2) {
+        const c1 = hexToRgb(color1);
+        const c2 = hexToRgb(color2);
+        const mixed = {
+          r: Math.floor((c1.r + c2.r) / 2),
+          g: Math.floor((c1.g + c2.g) / 2),
+          b: Math.floor((c1.b + c2.b) / 2),
+        };
+        return `rgb(${mixed.r},${mixed.g},${mixed.b})`;
+      }
+
+      // Convert hex color to RGB
+      function hexToRgb(hex) {
+        const bigint = parseInt(hex.replace("#", ""), 16);
+        return {
+          r: (bigint >> 16) & 255,
+          g: (bigint >> 8) & 255,
+          b: bigint & 255,
+        };
+      }
+
+      // Reset the mixing area
+      resetButton.addEventListener("click", () => {
+        mixedColor = ""; // Clear the mixed color
+        mixingArea.style.backgroundColor = "#fff"; // Reset to white
+      });
+
+      // Allow applying colors to canvas (both original and mixed)
+      const areas = document.querySelectorAll(".numbered-area");
+      areas.forEach((area) => {
+        area.addEventListener("dragover", (e) => {
+          e.preventDefault(); // Allow dropping
+        });
+
+        area.addEventListener("drop", (e) => {
+          const color = e.dataTransfer.getData("color"); // Get the dragged color (original or mixed)
+          if (color) {
+            e.target.style.backgroundColor = color; // Apply the dragged color
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
