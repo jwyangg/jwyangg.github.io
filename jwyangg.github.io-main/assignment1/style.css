@@ -1,0 +1,78 @@
+/* I wanted to try my hardest to mimic the "resizing browser" 
+so I did a lot of research on how I could make the image and text 
+more responsive to the webpage size, all the while leaving my text 
+on top of the image */
+.mainimage {
+  position: relative;
+}
+
+/* This was the positioning I was happiest with.
+Initially I tried doing a "bold" font but I felt that
+it didn't suit the website that I was analysing, and it 
+felt too harsh on the rest of the page */
+.mainimage figcaption {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  right: 30%;
+  bottom: 40%;
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* I tried to continue the colour of the sand with the 
+background colour, with the gradient slowly changing to 
+how the original website's colours looked like when resizing
+the browser (sunsetting and sunrising). 
+I wanted the format of my text to be "question - answer", so 
+I thought it made most sense making everything align central, 
+and going from top to bottom */
+body {
+  background: linear-gradient(
+    180deg,
+    rgba(249, 229, 202, 1) 20%,
+    rgb(221, 70, 163) 58%,
+    rgba(11, 168, 252, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* I felt like this font was very fitting to the image of the 
+original webpage so I chose this (very clean like the contents
+of the website) */
+.rajdhani-regular {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* This was done to differentiate the question from the answers.
+I used uppercase to make it more obvious. */
+span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* I added a very light, faint blue border to contrast the text
+more from the background. I made sure to not make the border too
+obvious, because I already added quite a lot of colours, I didn't 
+want to overwhelm the webpage more */
+p {
+  font-size: 18px;
+  margin: 4%;
+  border: 2px solid rgba(181, 232, 242, 0.904);
+  padding: 20px;
+  background-color: white;
+  position: relative;
+}
+
+/* This was so that the text at the very bottom didn't end
+abruptly, making it hard to both read and to click (if 
+the margin wasn't included) */
+.endtext {
+  margin-bottom: 4%;
+}
