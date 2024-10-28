@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint by Number - Pixel Art</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Paint by Number - Cute Pastel Garden</h1>
+
+  <!-- Mode Selection -->
+  <label for="modeSwitch">Painting Mode:</label>
+  <select id="modeSwitch">
+    <option value="individual">Individual Color</option>
+    <option value="all">Paint All Matching</option>
+  </select>
+
+  <!-- Color Mixing Station -->
+  <div class="mixing-station">
+    <h2>Color Mixing Station</h2>
+    <div>
+      <label for="color1">Select Color 1:</label>
+      <select id="color1">
+        <option value="1" style="background-color: #FFB6C1;">Pink</option>
+        <option value="2" style="background-color: #ADD8E6;">Blue</option>
+        <option value="3" style="background-color: #FFFFB3;">Yellow</option>
+        <option value="4" style="background-color: #D8BFD8;">Purple</option>
+        <option value="5" style="background-color: #FFFFFF;">White</option>
+      </select>
+    </div>
+    <div>
+      <label for="color2">Select Color 2:</label>
+      <select id="color2">
+        <option value="1" style="background-color: #FFB6C1;">Pink</option>
+        <option value="2" style="background-color: #ADD8E6;">Blue</option>
+        <option value="3" style="background-color: #FFFFB3;">Yellow</option>
+        <option value="4" style="background-color: #D8BFD8;">Purple</option>
+        <option value="5" style="background-color: #FFFFFF;">White</option>
+      </select>
+    </div>
+    <button id="mixButton">Mix Colors</button>
+    <button id="resetMix">Reset Mixing</button>
+    <div id="mixedColorDisplay" style="margin-top: 10px;"></div>
+  </div>
+
+  <!-- Color Legend -->
+  <div class="palette">
+    <div class="color" draggable="true" data-color="1" style="background-color: #FFB6C1;">1: Pink</div>
+    <div class="color" draggable="true" data-color="2" style="background-color: #ADD8E6;">2: Blue</div>
+    <div class="color" draggable="true" data-color="3" style="background-color: #FFFFB3;">3: Yellow</div>
+    <div class="color" draggable="true" data-color="4" style="background-color: #D8BFD8;">4: Purple</div>
+    <div class="color" draggable="true" data-color="5" style="background-color: #FFFFFF;">5: White</div>
+  </div>
+
+  <!-- Grid for Painting -->
+  <div class="grid"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
