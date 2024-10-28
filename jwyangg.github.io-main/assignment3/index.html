@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CHANGE</title>
+    <title>Paint by Number</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,19 +15,26 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="grid-container">
-      <div class="grid-item">1</div>
-      <div class="grid-item">2</div>
-      <div class="grid-item">3</div>
-      <div class="grid-item">4</div>
-      <div class="grid-item">5</div>
-      <div class="grid-item">6</div>
-      <div class="grid-item">7</div>
-      <div class="grid-item">8</div>
-      <div class="grid-item">9</div>
-      <div class="grid-item">10</div>
-      <div class="grid-item">11</div>
-      <div class="grid-item">12</div>
-    </div>
+    <h1>PAINT BY NUMBER</h1>
+    <!-- Mode Selection -->
+     <div>
+  <label for="modeSwitch">Painting Mode:</label>
+  <select id="modeSwitch">
+    <option value="individual">Individual Colour</option>
+    <option value="all">Paint all Matching</option>
+  </select></div>
+   <!-- Colour palette -->
+   <div class="palette">
+    <div class="color" draggable="true" data-color="1" style="background-color: #FFB6C1;">1: Pink</div>
+    <div class="color" draggable="true" data-color="2" style="background-color: #ADD8E6;">2: Blue</div>
+    <div class="color" draggable="true" data-color="3" style="background-color: #FFFFB3;">3: Yellow</div>
+    <div class="color" draggable="true" data-color="4" style="background-color: #D8BFD8;">4: Purple</div>
+    <div class="color" draggable="true" data-color="5" style="background-color: #FFFFFF;">5: White</div>
+  </div>
+    <!-- Creating grid -->
+    <div id="grid"></div>
+
+  
+
   </body>
 </html>

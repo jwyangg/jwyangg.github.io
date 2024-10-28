@@ -1,0 +1,104 @@
+.bungee-shade-regular {
+  font-family: "Bungee Shade", sans-serif;
+  /* font-weight: 400; */
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+/* As I was explaining before, you can see here that 
+I matched the colours to the video */
+:root {
+  --primary-bg-color: #f4ef59;
+  --text-color: #333;
+  --main-bg-color: #673782;
+  --main-text-color: #fffdfd;
+  --main-btn-bg-color: #938989;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* I wanted to keep a good distance so that I could 
+make use of positive and negative space */
+h2,
+p {
+  margin: 7%;
+}
+
+/* Create a container for the main content */
+.container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Header styling */
+header {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* Navigation styling */
+nav {
+  margin-top: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+  border: 5px ridge rgb(188, 96, 188);
+  padding: 5px;
+  background-color: rgb(238, 199, 233);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* Media player styling */
+.media-player {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.media-player {
+  max-width: 100%;
+}
+
+/* The original video size is very very small
+so I blew up the size to be good enough for easy viewing */
+video {
+  width: 200%;
+}
+
+/* I got rid of the footer in this because
+I wanted this page to limit the amount of colours, 
+and I didn't want the video to be sandwiched between
+two purple banners, like the 'home' page. */
+/* footer {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+} */

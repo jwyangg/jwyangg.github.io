@@ -1,0 +1,93 @@
+/* I chose this font because I felt like the graphic
+nature made it more appealing to a younger audience */
+.bungee-shade-regular {
+  font-family: "Bungee Shade", sans-serif;
+  /* font-weight: 400; */
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+/* I chose the colours based off of the video that was provided.
+The main colour was a green so I made the webpage colours contrast. 
+I also chose these colours because they're bright and bold which were
+more suitable for a kids website. */
+:root {
+  --primary-bg-color: #f4ef59;
+  --text-color: #333;
+  --main-bg-color: #673782;
+  --main-text-color: #fffdfd;
+  --main-btn-bg-color: #938989;
+}
+
+/* Made sure everything was centered so it's 
+visually symmetrically balanced */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* Create a container for the main content */
+.container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 10rem;
+}
+
+/* Making sure that there is a good enough gap in between
+the welcome text and the descriptive text so that there is 
+a good balance. */
+.main-text {
+  margin: 10%;
+}
+
+/* Header styling */
+header {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* Navigation styling */
+nav {
+  margin-top: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* Made the navigation bar options look visibly like buttons, 
+because I chose this to be catered for kids. */
+nav ul li {
+  margin-right: 20px;
+  border: 5px ridge rgb(188, 96, 188);
+  padding: 5px;
+  background-color: rgb(238, 199, 233);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}

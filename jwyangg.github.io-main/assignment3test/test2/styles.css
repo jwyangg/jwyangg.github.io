@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .palette {
+    margin-bottom: 20px;
+  }
+  
+  .color {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: grab;
+    line-height: 40px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(16, 40px);
+    grid-template-rows: repeat(16, 40px);
+    gap: 1px;
+    justify-content: center;
+  }
+  
+  .cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+
+  
