@@ -1,18 +1,41 @@
-.grid-container {
-  display: grid;
+.body {
+  display: flex;
   justify-content: center;
-  grid-template-columns: auto auto auto;
-  background-color: blue;
-  /* padding: 10px; */
-  grid-template-columns: repeat(5, 100px);
-  grid-template-rows: repeat(5, 100px);
-  gap: 2px;
+  align-items: center;
+  text-align: center;
+}
+/* Container for the grid */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(26, 50px); /* 26 columns, each 20px wide */
+  grid-template-rows: repeat(16, 50px);    /* 16 rows, each 20px tall */
+  gap: 2px;                                /* Optional spacing between blocks */
+  justify-content: center;
 }
 
-.grid-item {
-  background-color: aqua;
-  border: 1px solid white;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+/* Style for each block */
+.block {
+  width: 50px;
+  height: 50px;
+  background-color: lightgray;
+  border: 1px solid #ddd; /* Optional border */
+}
+/* Palette styling */
+.palette {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
 }
