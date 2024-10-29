@@ -116,6 +116,9 @@ function convertToRGB(color) {
 
 // Finding the average colour for the mixed colours (this was an absolute nightmare as well
 // but I wanted to add it to make the best of the drag and drop features)
+// Just an FYI the colours change very slightly so if you want a really dark green
+// you have to keep adding black onto green (if you started off with green, but
+// if you started off with black you can just add green a couple of times)
 function mixColors(colors) {
   let red = 0;
   let green = 0;
