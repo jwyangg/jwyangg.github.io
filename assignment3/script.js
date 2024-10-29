@@ -197,8 +197,8 @@ resetButton.addEventListener("click", () => {
 });
 
 // Welcome message and instructions for the experience
-// window.onload = function () {
-//   alert(
-//     "Welcome!\nThe numbers are a guide to where you should be dragging and dropping but feel free to colour multiple numbers the same colour!\nHave fun! :)"
-//   );
-// };
+window.onload = function () {
+  alert(
+    "Welcome!\nThe numbers are a guide to where you should be dragging and dropping but feel free to colour multiple numbers the same colour!\nHave fun! :)"
+  );
+};
