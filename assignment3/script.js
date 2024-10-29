@@ -191,12 +191,14 @@ const mixingColour = document.getElementById("mixing-palette");
 const resetButton = document.getElementById("reset-button");
 
 resetButton.addEventListener("click", () => {
+  // Clearing the accumulated colours that were in the memory
+  accumulatedColors = [];
   mixingColour.style.backgroundColor = "";
 });
 
 // Welcome message and instructions for the experience
-window.onload = function () {
-  alert(
-    "Welcome!\nThe numbers are a guide to where you should be dragging and dropping but feel free to colour multiple numbers the same colour!\nHave fun! :)"
-  );
-};
+// window.onload = function () {
+//   alert(
+//     "Welcome!\nThe numbers are a guide to where you should be dragging and dropping but feel free to colour multiple numbers the same colour!\nHave fun! :)"
+//   );
+// };
