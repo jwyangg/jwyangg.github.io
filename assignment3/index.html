@@ -13,28 +13,90 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <!-- Font for h1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nabla&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Sankofa+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font for rest of body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nabla&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Sankofa+Display&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>PAINT BY NUMBER</h1>
-    <!-- Mode Selection -->
-     <div>
-  <label for="modeSwitch">Painting Mode:</label>
-  <select id="modeSwitch">
-    <option value="individual">Individual Colour</option>
-    <option value="all">Paint all Matching</option>
-  </select></div>
-   <!-- Colour palette -->
-   <div class="palette">
-    <div class="color" draggable="true" data-color="1" style="background-color: #FFB6C1;">1: Pink</div>
-    <div class="color" draggable="true" data-color="2" style="background-color: #ADD8E6;">2: Blue</div>
-    <div class="color" draggable="true" data-color="3" style="background-color: #FFFFB3;">3: Yellow</div>
-    <div class="color" draggable="true" data-color="4" style="background-color: #D8BFD8;">4: Purple</div>
-    <div class="color" draggable="true" data-color="5" style="background-color: #FFFFFF;">5: White</div>
-  </div>
-    <!-- Creating grid -->
+    <h1 class="nabla-uniquifier">PAINT BY NUMBER!</h1>
+
+    <!-- Option to select individual block colouring
+     or colouring in blocks (of the number) -->
+    <div class="montserrat-uniquifier">
+      <label for="modeSwitch">Painting Mode:</label>
+      <select id="modeSwitch">
+        <option value="individual">Individual Colour</option>
+        <option value="all">Paint all Matching</option>
+      </select>
+    </div>
+
+    <!-- Base colour palette users can choose from, more options 
+     after mixing the colours from these basic colours -->
+    <div class="palette">
+      <div
+        class="palette-color"
+        draggable="true"
+        style="background-color: #fd677d"
+      ></div>
+      <div
+        class="palette-color"
+        draggable="true"
+        style="background-color: #f3a552"
+      ></div>
+      <div
+        class="palette-color"
+        draggable="true"
+        style="background-color: #f9f971"
+      ></div>
+      <div
+        class="palette-color"
+        draggable="true"
+        style="background-color: #95ff78"
+      ></div>
+      <div
+        class="palette-color"
+        draggable="true"
+        style="background-color: #86cbf8"
+      ></div>
+      <div
+        class="palette-color"
+        draggable="true"
+        style="background-color: #d59eff"
+      ></div>
+      <div
+        class="palette-color"
+        draggable="true"
+        style="background-color: #ffffff"
+      ></div>
+      <div
+        class="palette-color"
+        draggable="true"
+        style="background-color: #000000"
+      ></div>
+
+      <!-- Colour mixing area, users can create colours of their choice -->
+      <div id="mixing-palette" draggable="true"></div>
+      <p class="montserrat-uniquifier">← Mix Colours Here!</p>
+    </div>
+
+    <!-- Added a reset button for the colour mixing area, 
+     so that users can make more new colours -->
+    <button id="reset-button" class="montserrat-uniquifier">
+      Reset Mixing Zone
+    </button>
+
+    <!-- Grid pattern for the actual design for the paint by number-->
     <div id="grid"></div>
-
-  
-
   </body>
 </html>
